@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Upax." parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#455a64</item>
+        <item name="colorPrimaryVariant">#1B2529</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#4D5558</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#1D1F20</item>
+        <item name="android:navigationBarColor">#1B2529</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- navigation ui style. -->
+    <style name="navigation" parent="Theme.Upax">
+        <item name="colorOnSurface">@color/white</item>             <!-- text color. -->
+        <item name="colorOnSurfaceVariant">#808080</item>           <!-- icon inactive. -->
+        <item name="colorOnSecondaryContainer">@color/white</item>  <!-- icon active. -->
+        <item name="colorSecondaryContainer">#2B3F42</item>         <!-- indicator color. -->
+    </style>
+</resources>

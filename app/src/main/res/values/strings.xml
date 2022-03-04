@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Upax</string>
+
+    //STRING ALERT NETWORK
+    <string name="alert_network_title">Sin conexión</string>
+    <string name="alert_network_cancel">Cancelar</string>
+    <string name="alert_network_connect">Conectar</string>
+    <string name="alert_network_message">¿Deseas conectarte a un red de internet, para continuar?</string>
+
+    <string name="loading">loading..</string>
+    <string name="description">Description</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="top_movie">Peliculas Top</string>
+    <string name="rate">Calificación: %1$s</string>
+
+    //PERMISSION STRINGS
+    <string name="permission_alert_config_title">Permiso denegado</string>
+    <string name="permission_alert_config_message">Para poder realizar la acción es necesario dar permiso desde el apartado de configuración</string>
+    <string name="permission_alert_config_positive">Aceptar</string>
+    <string name="permission_alert_config_negative">Cancelar</string>
+
+    //KEYS SHARED_PREFERENCE
+    <string name="Permission_key">PERMISSION_KEY</string>
+</resources>
