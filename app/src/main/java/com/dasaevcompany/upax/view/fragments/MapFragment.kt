@@ -125,7 +125,7 @@ class MapFragment : Fragment(), OnMapReadyCallback{
     private fun getLocationRealTime() {
         try {
             updateLocationReady = true
-            val timeDelay:Long = 2*60000 /** Time to update location **/
+            val timeDelay:Long = 5*60000 /** Time to update location 5 minutes **/
             locationRequest = LocationRequest.create().apply {
                 interval = 10000
                 fastestInterval = timeDelay
