@@ -16,6 +16,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import com.dasaevcompany.upax.databinding.FragmentMapBinding
 import com.dasaevcompany.upax.utilities.ConnectivityUtil
+import com.dasaevcompany.upax.utilities.NotificationsChannelUtil
 import com.dasaevcompany.upax.utilities.PermissionUtil
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -63,6 +64,10 @@ class MapFragment : Fragment(), OnMapReadyCallback{
     }
 
     private fun createMapFragment() {
+
+        /** init channel notification **/
+        NotificationsChannelUtil().channelLocation(requireActivity())
+
         /** get location manager **/
         locationManager = requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
@@ -130,6 +135,7 @@ class MapFragment : Fragment(), OnMapReadyCallback{
                 override fun onLocationResult(locationResult : LocationResult) {
                     for (location in locationResult.locations) {
                         val place = LatLng(location.latitude, location.longitude)
+                        NotificationsChannelUtil().notifyLocationUpdate(requireActivity(),place)
                         map.addMarker(MarkerOptions().position(place).title("Ubicación personalizada"))
                         Toast.makeText(requireActivity(), "Ubicacion Actualizada", Toast.LENGTH_SHORT).show()
                     }
